@@ -20,7 +20,11 @@ const Dashboard = () => {
     const response = await axios.get(`https://openlibrary.org/search.json?offset=${(page-1)*pageSize}&limit=${pageSize}${searchQuery}`);
     setBooks(response.data.docs);
     setTotalRecords(response.data.numFound);
-  };
+};
+
+console.log(books);
+
+  
 
   return (
     <div>
